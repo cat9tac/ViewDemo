@@ -1,14 +1,10 @@
-package com.example.view1;
+package com.example.viewdemo.measureAndXfermode;
 
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.viewdemo.R;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.View;
 
 public class ShowActivity extends AppCompatActivity {
     private  int mIndex = 0;
@@ -30,8 +26,6 @@ public class ShowActivity extends AppCompatActivity {
                 default:
                     setContentView(R.layout.activity_show);
         }
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
     }
 

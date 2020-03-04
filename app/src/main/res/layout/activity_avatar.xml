@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.viewdemo.measureAndXfermode.MesureAndXfermodeActivity">
 
 
-    <com.example.view1.AvatarView
+    <com.example.viewdemo.measureAndXfermode.AvatarView
         android:layout_width="400dp"
         android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"

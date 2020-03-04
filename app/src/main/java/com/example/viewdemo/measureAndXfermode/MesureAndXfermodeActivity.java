@@ -1,4 +1,4 @@
-package com.example.view1;
+package com.example.viewdemo.measureAndXfermode;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import com.example.viewdemo.R;
+
+public class MesureAndXfermodeActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mDashBordBtn;
     private Button mPieBordBtn;
     private Button mBtn;

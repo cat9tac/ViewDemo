@@ -1,4 +1,4 @@
-package com.example.view1;
+package com.example.viewdemo.measureAndXfermode;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,6 +13,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import androidx.annotation.Nullable;
+
+import com.example.viewdemo.R;
 
 public class AvatarView extends View {
     private static final float WIDTH = Utils.dp2px(300);

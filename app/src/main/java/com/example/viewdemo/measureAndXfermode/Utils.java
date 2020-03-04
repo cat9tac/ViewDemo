@@ -1,4 +1,4 @@
-package com.example.view1;
+package com.example.viewdemo.measureAndXfermode;
 
 import android.content.res.Resources;
 import android.util.TypedValue;
