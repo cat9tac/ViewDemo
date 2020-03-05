@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="3000">
+        <!--   app:motionInterpolator="bounce"-->
+
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@+id/tv_a" />
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:onTouchUp="stop"
+            app:touchAnchorId="@id/tv_t" />
+        <KeyFrameSet>
+         <!--   <KeyAttribute
+                android:rotation="180"
+                android:scaleX="2"
+                android:scaleY="2"
+                app:framePosition="50"
+                app:motionTarget="@+id/tv_t" />-->
+            <KeyCycle
+                android:rotation="0"
+                app:framePosition="0"
+                app:motionTarget="@id/tv_t"
+                app:wavePeriod="0"
+                app:waveShape="sin"
+                />
+            <KeyCycle
+                android:rotation="45"
+                app:framePosition="50"
+                app:motionTarget="@id/tv_t"
+                app:wavePeriod="0.5"
+                app:waveShape="sin"
+                />
+            <KeyCycle
+                android:rotation="0"
+                app:framePosition="100"
+                app:motionTarget="@id/tv_t"
+                app:wavePeriod="10"
+                app:waveShape="sin"
+                />
+           <!-- <KeyPosition
+                app:curveFit="linear"
+                app:framePosition="50"
+                app:percentWidth="0"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@+id/tv_t"
+                app:percentX="0.0"
+                app:percentY="0.8" />-->
+
+        </KeyFrameSet>
+
+
+    </Transition>
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@id/tv_c">
+            <Motion
+                app:pathMotionArc="startVertical"
+                app:transitionEasing="decelerate" />
+            <Transform
+                android:rotation="360"
+                android:scaleX="1.33"
+                android:scaleY="1.22"
+                android:translationZ="12dp" />
+            <PropertySet/>
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="@color/colorAccent" />
+        </Constraint>
+        <Constraint android:id="@id/tv_a">
+            <Motion app:pathMotionArc="startHorizontal" />
+        </Constraint>
+
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/tv_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_a" />
+
+        <Constraint
+            android:id="@+id/tv_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_t" />
+        <Constraint
+            android:id="@+id/tv_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+
+</MotionScene>
